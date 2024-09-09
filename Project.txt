@@ -23,6 +23,7 @@ BUFFER_SIZE = 1000000
     project BYTE " ",0
 name1 BYTE "                          22k-4180 MUHAMMAD AHAN ALI ",0
 name2 BYTE "                         22K-4225 MUHAMMAD ISMAIL AWAN ",0
+name2 BYTE "                         22K-4222 AYAN EJAZ ",0
 
     load BYTE "                          PLEASE WAIT WHILE LOADING: ",0
     loading_success BYTE "                           CONTENT LOADED SUCCESSFULLY",0
@@ -717,6 +718,13 @@ loading proc
 	mov dl, 41
 	call gotoxy
 	mov edx,offset name2
+	call writestring
+
+	call delay
+	mov dh, 13
+	mov dl, 41
+	call gotoxy
+	mov edx,offset name3
 	call writestring
 call crlf
 call crlf
